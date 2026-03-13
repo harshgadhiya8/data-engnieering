@@ -1,0 +1,20 @@
+2026-03-13 18:25:10,086 - INFO - Successfully fetched weather data for London, UK
+2026-03-13 18:25:11,170 - INFO - Successfully fetched weather data for New York, USA
+2026-03-13 18:25:12,227 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-03-13 18:25:13,082 - INFO - Successfully fetched weather data for Mumbai, India
+2026-03-13 18:25:14,286 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-03-13 18:25:14,401 - INFO - Data successfully loaded into SQL database
+2026-03-13 18:25:35,186 - INFO - Successfully fetched weather data for London, UK
+2026-03-13 18:25:36,328 - INFO - Successfully fetched weather data for New York, USA
+2026-03-13 18:25:37,280 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-03-13 18:25:38,349 - INFO - Successfully fetched weather data for Mumbai, India
+2026-03-13 18:25:39,248 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-03-13 18:25:39,324 - ERROR - Failed to load data into SQL database: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: FATAL:  database "postgre" does not exist
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-13 18:25:51,293 - INFO - Successfully fetched weather data for London, UK
+2026-03-13 18:25:52,385 - INFO - Successfully fetched weather data for New York, USA
+2026-03-13 18:25:53,433 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-03-13 18:25:54,597 - INFO - Successfully fetched weather data for Mumbai, India
+2026-03-13 18:25:55,566 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-03-13 18:25:55,657 - INFO - Data successfully loaded into SQL database
