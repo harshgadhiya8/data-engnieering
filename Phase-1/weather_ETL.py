@@ -1,6 +1,7 @@
 import requests
 import json
 import pandas as pd
+from sqlalchemy import create_engine
 
 url = "https://api.open-meteo.com/v1/forecast"
 
@@ -31,5 +32,9 @@ for city, coords in dict.items():
 
 df = pd.DataFrame(weather_data)
 df.columns = ["city", "temperature_celsius", "wind_speed_kmh", "wind_direction_degrees", "weather_code", "time"]
-df.status = df.apply(lambda x: "Hot" if x["temperature_celsius"] > 25 else "Cold")
+df["status"] = df.apply(lambda x: "Hot" if x["temperature_celsius"] > 25 else "Cold", axis=1)
 print(df)
+df.to_parquet("weather_data.parquet", index=False)
+
+engine = create_engine("postgresql://harsh:@localhost:5432/postgres")
+df.to_sql("weather", engine, if_exists="append", index=False)
