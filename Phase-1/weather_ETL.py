@@ -56,5 +56,3 @@ try:
     logging.info("Data successfully loaded into SQL database")
 except Exception as e:
     logging.error(f"Failed to load data into SQL database: {e}")
-# df2 = pd.read_parquet("weather_data.parquet")
-# print(df2)
