@@ -2,13 +2,13 @@ version: 2
 
 sources:
   - name: raw
-    schema: phase-2
+    schema: public
     tables:
       - name: orders
-      - name: order_items
+      - name: order_item
       - name: order_payments
       - name: order_reviews
-      - name: customers
+      - name: customer
       - name: products
       - name: sellers
       - name: product_category_name_translation
