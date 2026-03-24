@@ -1,3 +1,8 @@
+{{ config(
+    materialized='incremental',
+    unique_key='order_id'
+) }}
+
 Select o.order_id,
         o.customer_id,
         ot.product_id,
@@ -12,3 +17,6 @@ from {{ ref('stg_order') }} o
 join {{ ref('stg_order_item') }} ot on o.order_id = ot.order_id
 join {{ ref('stg_order_payments') }} op on o.order_id = op.order_id
 join {{ ref('stg_order_reviews') }} odr on o.order_id = odr.order_id
+{% if is_incremental() %}
+where o.order_purchase_timestamp > (select max(order_purchase_timestamp) from {{ this }})
+{% endif %}
