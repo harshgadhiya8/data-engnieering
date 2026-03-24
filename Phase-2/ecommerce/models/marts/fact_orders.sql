@@ -1,9 +1,10 @@
 {{ config(
     materialized='incremental',
-    unique_key='order_id'
+    unique_key=["order_id", "order_item_id"]
 ) }}
 
 Select o.order_id,
+        ot.order_item_id,
         o.customer_id,
         ot.product_id,
         ot.seller_id,
