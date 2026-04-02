@@ -1,5 +1,12 @@
 # dbt Notes — Phase 2 Reference
 
+## Quick Navigation
+
+**New to dbt?** Start here:
+1. **[RUNBOOK.md](RUNBOOK.md)** - Complete guide to running the pipeline and troubleshooting errors
+2. **[DBT_CHEATSHEET.md](DBT_CHEATSHEET.md)** - Quick reference for common commands
+3. **This README** - Deep dive into dbt concepts and best practices
+
 ---
 
 ## What is dbt?
