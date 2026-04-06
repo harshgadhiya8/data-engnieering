@@ -1,0 +1,10 @@
+# Virtual Environments
+**/bin/
+**/lib/
+**/include/
+**/share/
+*env/
+
+# Logs
+**/logs/
+*.log
