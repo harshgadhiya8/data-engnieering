@@ -1,0 +1,47 @@
+2026-04-06 12:30:35,889 - INFO - Successfully fetched weather data for London, UK
+2026-04-06 12:30:37,099 - INFO - Successfully fetched weather data for New York, USA
+2026-04-06 12:30:38,155 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-04-06 12:30:39,281 - INFO - Successfully fetched weather data for Mumbai, India
+2026-04-06 12:30:40,352 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-04-06 12:30:40,354 - INFO - Raw data saved to raw_weather.json
+2026-04-06 12:30:40,369 - INFO - Transformation complete
+2026-04-06 12:30:40,404 - INFO - Data saved to weather_data.parquet
+2026-04-06 12:30:40,992 - INFO - Data successfully loaded into PostgreSQL
+2026-04-06 12:30:47,284 - INFO - [0m07:00:42  Running with dbt=1.11.7
+[0m07:00:42  Registered adapter: postgres=1.10.0
+[0m07:00:42  Found 12 models, 6 data tests, 9 sources, 464 macros
+[0m07:00:42  
+[0m07:00:42  Concurrency: 4 threads (target='dev')
+[0m07:00:42  
+[0m07:00:42  1 of 12 START sql view model dev.stg_customers ................................. [RUN]
+[0m07:00:42  2 of 12 START sql view model dev.stg_order ..................................... [RUN]
+[0m07:00:42  3 of 12 START sql view model dev.stg_order_item ................................ [RUN]
+[0m07:00:42  4 of 12 START sql view model dev.stg_order_payments ............................ [RUN]
+[0m07:00:42  4 of 12 OK created sql view model dev.stg_order_payments ....................... [[32mCREATE VIEW[0m in 0.10s]
+[0m07:00:42  3 of 12 OK created sql view model dev.stg_order_item ........................... [[32mCREATE VIEW[0m in 0.10s]
+[0m07:00:42  1 of 12 OK created sql view model dev.stg_customers ............................ [[32mCREATE VIEW[0m in 0.10s]
+[0m07:00:42  2 of 12 OK created sql view model dev.stg_order ................................ [[32mCREATE VIEW[0m in 0.10s]
+[0m07:00:42  5 of 12 START sql view model dev.stg_order_reviews ............................. [RUN]
+[0m07:00:42  6 of 12 START sql view model dev.stg_products .................................. [RUN]
+[0m07:00:42  7 of 12 START sql view model dev.stg_sellers ................................... [RUN]
+[0m07:00:42  8 of 12 START sql view model dev.dim_customers ................................. [RUN]
+[0m07:00:43  8 of 12 OK created sql view model dev.dim_customers ............................ [[32mCREATE VIEW[0m in 0.04s]
+[0m07:00:43  5 of 12 OK created sql view model dev.stg_order_reviews ........................ [[32mCREATE VIEW[0m in 0.04s]
+[0m07:00:43  9 of 12 START sql view model dev.dim_date ...................................... [RUN]
+[0m07:00:43  10 of 12 START sql incremental model dev.fact_orders ........................... [RUN]
+[0m07:00:43  7 of 12 OK created sql view model dev.stg_sellers .............................. [[32mCREATE VIEW[0m in 0.04s]
+[0m07:00:43  6 of 12 OK created sql view model dev.stg_products ............................. [[32mCREATE VIEW[0m in 0.05s]
+[0m07:00:43  11 of 12 START sql view model dev.dim_sellers .................................. [RUN]
+[0m07:00:43  12 of 12 START sql view model dev.dim_products ................................. [RUN]
+[0m07:00:43  9 of 12 OK created sql view model dev.dim_date ................................. [[32mCREATE VIEW[0m in 0.04s]
+[0m07:00:43  11 of 12 OK created sql view model dev.dim_sellers ............................. [[32mCREATE VIEW[0m in 0.02s]
+[0m07:00:43  12 of 12 OK created sql view model dev.dim_products ............................ [[32mCREATE VIEW[0m in 0.02s]
+[0m07:00:43  10 of 12 OK created sql incremental model dev.fact_orders ...................... [[32mINSERT 0 0[0m in 0.40s]
+[0m07:00:43  
+[0m07:00:43  Finished running 1 incremental model, 11 view models in 0 hours 0 minutes and 0.65 seconds (0.65s).
+[0m07:00:43  
+[0m07:00:43  [32mCompleted successfully[0m
+[0m07:00:43  
+[0m07:00:43  Done. PASS=12 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=12
+
+2026-04-06 12:30:47,285 - INFO - dbt models ran successfully
