@@ -1,0 +1,29 @@
+[2026-04-07T13:19:05.399+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-07T13:19:05.459+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_etl_pipeline.dbt_run manual__2026-04-07T13:18:53.796948+00:00 [queued]>
+[2026-04-07T13:19:05.462+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_etl_pipeline.dbt_run manual__2026-04-07T13:18:53.796948+00:00 [queued]>
+[2026-04-07T13:19:05.462+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2026-04-07T13:19:05.466+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): dbt_run> on 2026-04-07 13:18:53.796948+00:00
+[2026-04-07T13:19:05.469+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3912) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-07T13:19:05.469+0000] {standard_task_runner.py:72} INFO - Started process 3913 to run task
+[2026-04-07T13:19:05.470+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_etl_pipeline', 'dbt_run', 'manual__2026-04-07T13:18:53.796948+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpefs72hj2']
+[2026-04-07T13:19:05.470+0000] {standard_task_runner.py:105} INFO - Job 27: Subtask dbt_run
+[2026-04-07T13:19:05.484+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_etl_pipeline.dbt_run manual__2026-04-07T13:18:53.796948+00:00 [running]> on host ac5f5f0e497f
+[2026-04-07T13:19:05.506+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='harsh' AIRFLOW_CTX_DAG_ID='weather_etl_pipeline' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-07T13:18:53.796948+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-07T13:18:53.796948+00:00'
+[2026-04-07T13:19:05.506+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-04-07T13:19:05.506+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-04-07T13:19:05.506+0000] {logging_mixin.py:190} INFO - Current task name:dbt_run state:running start_date:2026-04-07 13:19:05.459874+00:00
+[2026-04-07T13:19:05.506+0000] {logging_mixin.py:190} INFO - Dag name:weather_etl_pipeline and current dag run status:running
+[2026-04-07T13:19:05.506+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-07T13:19:05.507+0000] {pipeline.py:98} ERROR - dbt run failed: [Errno 2] No such file or directory: '/Users/harsh/data-engineering/Phase-2/ecommerce'
+[2026-04-07T13:19:05.507+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-04-07T13:19:05.510+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-07T13:19:05.510+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=weather_etl_pipeline, task_id=dbt_run, run_id=manual__2026-04-07T13:18:53.796948+00:00, execution_date=20260407T131853, start_date=20260407T131905, end_date=20260407T131905
+[2026-04-07T13:19:05.515+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-04-07T13:19:05.515+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-04-07T13:19:05.515+0000] {logging_mixin.py:190} INFO - Dag name:weather_etl_pipeline queued_at:2026-04-07 13:18:53.823993+00:00
+[2026-04-07T13:19:05.515+0000] {logging_mixin.py:190} INFO - Task hostname:ac5f5f0e497f operator:PythonOperator
+[2026-04-07T13:19:05.527+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-07T13:19:05.533+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-07T13:19:05.533+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
