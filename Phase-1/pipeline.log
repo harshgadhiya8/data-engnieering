@@ -178,3 +178,15 @@
 2026-04-18 22:45:47,620 - INFO - Successfully fetched weather data for Mumbai, India
 2026-04-18 22:45:48,398 - INFO - Successfully fetched weather data for Sydney, Australia
 2026-04-18 22:45:49,007 - INFO - Data successfully loaded into SQL database
+2026-04-20 14:07:33,561 - INFO - Successfully fetched weather data for London, UK
+2026-04-20 14:07:34,485 - INFO - Successfully fetched weather data for New York, USA
+2026-04-20 14:07:35,236 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-04-20 14:07:36,009 - INFO - Successfully fetched weather data for Mumbai, India
+2026-04-20 14:07:36,893 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-04-20 14:07:37,095 - INFO - Data successfully loaded into SQL database
+2026-04-21 11:58:11,831 - INFO - Successfully fetched weather data for London, UK
+2026-04-21 11:58:12,703 - INFO - Successfully fetched weather data for New York, USA
+2026-04-21 11:58:13,531 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-04-21 11:58:14,286 - INFO - Successfully fetched weather data for Mumbai, India
+2026-04-21 11:58:15,129 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-04-21 11:58:15,346 - INFO - Data successfully loaded into SQL database
