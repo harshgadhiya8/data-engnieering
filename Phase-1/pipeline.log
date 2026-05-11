@@ -208,3 +208,59 @@
 2026-04-21 12:34:27,875 - INFO - Successfully fetched weather data for Mumbai, India
 2026-04-21 12:34:28,694 - INFO - Successfully fetched weather data for Sydney, Australia
 2026-04-21 12:34:28,858 - INFO - Data successfully loaded into SQL database
+2026-04-21 12:45:37,819 - INFO - Successfully fetched weather data for London, UK
+2026-04-21 12:45:38,661 - INFO - Successfully fetched weather data for New York, USA
+2026-04-21 12:45:39,499 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-04-21 12:45:40,259 - INFO - Successfully fetched weather data for Mumbai, India
+2026-04-21 12:45:41,061 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-04-21 12:45:41,199 - INFO - Data successfully loaded into SQL database
+2026-04-21 14:05:45,113 - INFO - Successfully fetched weather data for London, UK
+2026-04-21 14:05:46,349 - INFO - Successfully fetched weather data for New York, USA
+2026-04-21 14:05:47,622 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-04-21 14:05:48,885 - INFO - Successfully fetched weather data for Mumbai, India
+2026-04-21 14:05:50,100 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-04-21 14:05:50,317 - INFO - Data successfully loaded into SQL database
+2026-04-27 19:34:48,376 - INFO - Successfully fetched weather data for London, UK
+2026-04-27 19:34:49,304 - INFO - Successfully fetched weather data for New York, USA
+2026-04-27 19:34:50,183 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-04-27 19:34:51,007 - INFO - Successfully fetched weather data for Mumbai, India
+2026-04-27 19:34:51,894 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-04-27 19:34:52,463 - INFO - Data successfully loaded into SQL database
+2026-05-11 12:17:52,565 - INFO - Successfully fetched weather data for London, UK
+2026-05-11 12:17:54,664 - INFO - Successfully fetched weather data for New York, USA
+2026-05-11 12:17:55,987 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-05-11 12:17:57,873 - INFO - Successfully fetched weather data for Mumbai, India
+2026-05-11 12:17:58,853 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-05-11 12:17:59,363 - INFO - Data successfully loaded into SQL database
+2026-05-11 12:47:52,278 - INFO - Successfully fetched weather data for London, UK
+2026-05-11 12:47:53,264 - INFO - Successfully fetched weather data for New York, USA
+2026-05-11 12:47:54,265 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-05-11 12:47:55,645 - INFO - Successfully fetched weather data for Mumbai, India
+2026-05-11 12:47:56,988 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-05-11 12:47:57,128 - INFO - Data successfully loaded into SQL database
+2026-05-11 13:05:14,838 - INFO - Successfully fetched weather data for London, UK
+2026-05-11 13:05:16,778 - INFO - Successfully fetched weather data for New York, USA
+2026-05-11 13:05:17,776 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-05-11 13:05:19,380 - INFO - Successfully fetched weather data for Mumbai, India
+2026-05-11 13:05:20,469 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-05-11 13:05:20,606 - INFO - Data successfully loaded into SQL database
+2026-05-11 13:10:58,534 - INFO - Successfully fetched weather data for London, UK
+2026-05-11 13:11:01,487 - INFO - Successfully fetched weather data for New York, USA
+2026-05-11 13:11:07,439 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-05-11 13:11:09,905 - INFO - Successfully fetched weather data for Mumbai, India
+2026-05-11 13:11:14,083 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-05-11 13:11:14,213 - INFO - Data successfully loaded into SQL database
+2026-05-11 14:07:36,334 - INFO - Successfully fetched weather data for London, UK
+2026-05-11 14:07:37,307 - INFO - Successfully fetched weather data for New York, USA
+2026-05-11 14:07:38,516 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-05-11 14:07:39,463 - INFO - Successfully fetched weather data for Mumbai, India
+2026-05-11 14:07:41,115 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-05-11 14:07:41,278 - INFO - Data successfully loaded into SQL database
+2026-05-11 14:13:07,286 - INFO - Successfully fetched weather data for London, UK
+2026-05-11 14:13:08,302 - INFO - Successfully fetched weather data for New York, USA
+2026-05-11 14:13:10,297 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-05-11 14:13:11,559 - INFO - Successfully fetched weather data for Mumbai, India
+2026-05-11 14:13:12,517 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-05-11 14:13:12,587 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-05-11 14:13:13,668 - INFO - Uploaded weather_data.parquet to S3, pipeline triggered!
+2026-05-11 14:13:13,769 - INFO - Data successfully loaded into SQL database

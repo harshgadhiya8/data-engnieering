@@ -3,26 +3,29 @@ import json
 import pandas as pd
 from sqlalchemy import create_engine
 import logging
+import boto3
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.StreamHandler(),             # prints to terminal
-        logging.FileHandler("pipeline.log")  # saves to a file
+        logging.StreamHandler(),
+        logging.FileHandler("pipeline.log")
     ]
 )
+
 url = "https://api.open-meteo.com/v1/forecast"
 
-dict = {
+cities = {
     "London, UK": [51.5074, -0.1278],
     "New York, USA": [40.7128, -74.0060],
     "Tokyo, Japan": [35.6895, 139.6917],
     "Mumbai, India": [19.0760, 72.8777],
     "Sydney, Australia": [-33.8688, 151.2093]
 }
+
 weather_data = []
-for city, coords in dict.items():
+for city, coords in cities.items():
     params = {
         "latitude": coords[0],
         "longitude": coords[1],
@@ -30,7 +33,7 @@ for city, coords in dict.items():
     }
     try:
         response = requests.get(url, params=params)
-        response.raise_for_status()  # Check if the request was successful
+        response.raise_for_status()
         data = response.json()
         weather_data.append({
             "city": city,
@@ -43,13 +46,26 @@ for city, coords in dict.items():
         logging.info(f"Successfully fetched weather data for {city}")
     except requests.exceptions.RequestException as e:
         logging.error(f"Failed to fetch weather data for {city}: {e}")
-    
 
 df = pd.DataFrame(weather_data)
 df.columns = ["city", "temperature_celsius", "wind_speed_kmh", "wind_direction_degrees", "weather_code", "time"]
 df["status"] = df.apply(lambda x: "Hot" if x["temperature_celsius"] > 25 else "Cold", axis=1)
 print(df)
 df.to_parquet("weather_data.parquet", index=False)
+
+# Upload to S3 (triggers Lambda automatically)
+try:
+    s3 = boto3.client('s3', region_name='ap-south-1')
+    s3.upload_file(
+        'weather_data.parquet',
+        'weather-debt-etl-pipeline',
+        'weather_data.parquet'
+    )
+    logging.info("Uploaded weather_data.parquet to S3, pipeline triggered!")
+except Exception as e:
+    logging.error(f"Failed to upload to S3: {e}")
+
+# Load to local PostgreSQL
 try:
     engine = create_engine("postgresql://harsh:@localhost:5432/postgres")
     df.to_sql("weather", engine, if_exists="append", index=False)

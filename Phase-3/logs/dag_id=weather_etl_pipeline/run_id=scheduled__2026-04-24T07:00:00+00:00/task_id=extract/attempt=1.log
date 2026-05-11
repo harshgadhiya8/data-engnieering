@@ -1,0 +1,34 @@
+[2026-04-25T07:00:19.410+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-25T07:00:19.417+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_etl_pipeline.extract scheduled__2026-04-24T07:00:00+00:00 [queued]>
+[2026-04-25T07:00:19.495+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_etl_pipeline.extract scheduled__2026-04-24T07:00:00+00:00 [queued]>
+[2026-04-25T07:00:19.495+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2026-04-25T07:00:19.500+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): extract> on 2026-04-24 07:00:00+00:00
+[2026-04-25T07:00:19.504+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=20723) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-04-25T07:00:19.504+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_etl_pipeline', 'extract', 'scheduled__2026-04-24T07:00:00+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpv38mazw2']
+[2026-04-25T07:00:19.505+0000] {standard_task_runner.py:72} INFO - Started process 20724 to run task
+[2026-04-25T07:00:19.505+0000] {standard_task_runner.py:105} INFO - Job 84: Subtask extract
+[2026-04-25T07:00:19.525+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_etl_pipeline.extract scheduled__2026-04-24T07:00:00+00:00 [running]> on host ac5f5f0e497f
+[2026-04-25T07:00:19.559+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='harsh' AIRFLOW_CTX_DAG_ID='weather_etl_pipeline' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2026-04-24T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-24T07:00:00+00:00'
+[2026-04-25T07:00:19.559+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-04-25T07:00:19.560+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-04-25T07:00:19.560+0000] {logging_mixin.py:190} INFO - Current task name:extract state:running start_date:2026-04-25 07:00:19.417410+00:00
+[2026-04-25T07:00:19.561+0000] {logging_mixin.py:190} INFO - Dag name:weather_etl_pipeline and current dag run status:running
+[2026-04-25T07:00:19.561+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-25T07:00:19.574+0000] {pipeline.py:47} ERROR - Failed to fetch weather data for London, UK: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=51.5074&longitude=-0.1278&current_weather=True (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffff63200ad0>: Failed to resolve 'api.open-meteo.com' ([Errno -2] Name or service not known)"))
+[2026-04-25T07:00:19.577+0000] {pipeline.py:47} ERROR - Failed to fetch weather data for New York, USA: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=40.7128&longitude=-74.006&current_weather=True (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffff63200ad0>: Failed to resolve 'api.open-meteo.com' ([Errno -2] Name or service not known)"))
+[2026-04-25T07:00:19.580+0000] {pipeline.py:47} ERROR - Failed to fetch weather data for Tokyo, Japan: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=35.6895&longitude=139.6917&current_weather=True (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffff63075160>: Failed to resolve 'api.open-meteo.com' ([Errno -2] Name or service not known)"))
+[2026-04-25T07:00:19.583+0000] {pipeline.py:47} ERROR - Failed to fetch weather data for Mumbai, India: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=19.076&longitude=72.8777&current_weather=True (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffff630773e0>: Failed to resolve 'api.open-meteo.com' ([Errno -2] Name or service not known)"))
+[2026-04-25T07:00:19.586+0000] {pipeline.py:47} ERROR - Failed to fetch weather data for Sydney, Australia: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=-33.8688&longitude=151.2093&current_weather=True (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0xffff63077b60>: Failed to resolve 'api.open-meteo.com' ([Errno -2] Name or service not known)"))
+[2026-04-25T07:00:19.587+0000] {pipeline.py:52} INFO - Raw data saved to raw_weather.json
+[2026-04-25T07:00:19.587+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-04-25T07:00:19.592+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-25T07:00:19.592+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=weather_etl_pipeline, task_id=extract, run_id=scheduled__2026-04-24T07:00:00+00:00, execution_date=20260424T070000, start_date=20260425T070019, end_date=20260425T070019
+[2026-04-25T07:00:19.601+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-04-25T07:00:19.601+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-04-25T07:00:19.601+0000] {logging_mixin.py:190} INFO - Dag name:weather_etl_pipeline queued_at:2026-04-25 07:00:18.559467+00:00
+[2026-04-25T07:00:19.601+0000] {logging_mixin.py:190} INFO - Task hostname:ac5f5f0e497f operator:PythonOperator
+[2026-04-25T07:00:19.645+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-25T07:00:19.657+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-25T07:00:19.660+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
