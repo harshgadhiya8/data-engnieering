@@ -272,3 +272,11 @@
 2026-05-25 11:20:21,785 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
 2026-05-25 11:20:22,672 - INFO - Uploaded weather_data.parquet to S3, pipeline triggered!
 2026-05-25 11:20:23,083 - INFO - Data successfully loaded into SQL database
+2026-05-26 22:41:56,229 - INFO - Successfully fetched weather data for London, UK
+2026-05-26 22:41:57,240 - INFO - Successfully fetched weather data for New York, USA
+2026-05-26 22:41:58,204 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-05-26 22:41:59,108 - INFO - Successfully fetched weather data for Mumbai, India
+2026-05-26 22:42:00,072 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-05-26 22:42:00,231 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-05-26 22:42:01,408 - INFO - Uploaded weather_data.parquet to S3, pipeline triggered!
+2026-05-26 22:42:01,815 - INFO - Data successfully loaded into SQL database
