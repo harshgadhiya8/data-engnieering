@@ -304,3 +304,16 @@
 2026-05-29 13:01:19,231 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
 2026-05-29 13:01:19,882 - INFO - Uploaded weather_data.parquet to S3, pipeline triggered!
 2026-05-29 13:01:21,439 - INFO - Data successfully loaded into SQL database
+2026-06-02 11:25:35,688 - ERROR - Failed to fetch weather data for London, UK: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=51.5074&longitude=-0.1278&current_weather=True (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.open-meteo.com', port=443) at 0x112894b30>, 'Connection to api.open-meteo.com timed out. (connect timeout=None)'))
+2026-06-02 11:26:50,737 - ERROR - Failed to fetch weather data for New York, USA: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=40.7128&longitude=-74.006&current_weather=True (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.open-meteo.com', port=443) at 0x114810f50>, 'Connection to api.open-meteo.com timed out. (connect timeout=None)'))
+2026-06-02 11:28:05,745 - ERROR - Failed to fetch weather data for Tokyo, Japan: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=35.6895&longitude=139.6917&current_weather=True (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.open-meteo.com', port=443) at 0x114811640>, 'Connection to api.open-meteo.com timed out. (connect timeout=None)'))
+2026-06-02 11:29:20,752 - ERROR - Failed to fetch weather data for Mumbai, India: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=19.076&longitude=72.8777&current_weather=True (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.open-meteo.com', port=443) at 0x114811d30>, 'Connection to api.open-meteo.com timed out. (connect timeout=None)'))
+2026-06-02 11:30:35,803 - ERROR - Failed to fetch weather data for Sydney, Australia: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=-33.8688&longitude=151.2093&current_weather=True (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.open-meteo.com', port=443) at 0x114811280>, 'Connection to api.open-meteo.com timed out. (connect timeout=None)'))
+2026-06-03 13:01:49,260 - INFO - Successfully fetched weather data for London, UK
+2026-06-03 13:01:50,071 - INFO - Successfully fetched weather data for New York, USA
+2026-06-03 13:01:50,815 - INFO - Successfully fetched weather data for Tokyo, Japan
+2026-06-03 13:01:51,553 - INFO - Successfully fetched weather data for Mumbai, India
+2026-06-03 13:01:52,361 - INFO - Successfully fetched weather data for Sydney, Australia
+2026-06-03 13:01:52,429 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2026-06-03 13:01:53,254 - INFO - Uploaded weather_data.parquet to S3, pipeline triggered!
+2026-06-03 13:01:53,433 - INFO - Data successfully loaded into SQL database
